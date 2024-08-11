@@ -1,0 +1,231 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id="audio" src="song1.mp3" loop></audio>
+    <div>
+        Hello baby, I am back again... hehe <br><button class="button-23" id="playButton" onclick="scrollToSection('start')">click here</button>
+    </div>
+    <div id="start">
+        Happy 3-month anniversary to us. hehe
+    </div>
+    <div>
+        3 months is not a big number, but I am happy that we are together for 3 months.
+    </div>
+    <div>
+        I hope that we will go like this forever. ❤️
+    </div>
+    <div>
+        Sorry baby last time you became sad after reading...
+    </div>
+    <div>
+        But, this time I will try not to repeat like that before... hehehe
+    </div>
+    <div>
+        Baby you know, <br>before when I was at home, all my time was yours.
+    </div>
+    <div>
+        I tried to gave my all possible time to you.
+    </div>
+    <div>
+        Now, my semester has started. I have to study and go to class as well.
+    </div>
+    <div>
+        But still, I am trying my best to give all my time to you.
+    </div>
+    <div>
+        If it's less, then sorry baby. I will try my more best for you now.
+    </div>
+    <div>
+        because, I never want you feel that I don't love you.
+    </div>
+    <div>
+        I always love you.
+    </div>
+    <div>
+        I love you before.
+    </div>
+    <div>
+        I love you now.
+    </div>
+    <div>
+        and I will love you in future as well.
+    </div>
+    <div>
+        I love you.❤️
+    </div>
+    <div>
+        You know babe, since the time I have come to college,
+    </div>
+    <div>
+        We have started doing video call. I love it.
+    </div>
+    <div>
+        In the morning before going to class, seeing you makes my day.
+    </div>
+    <div>
+        In the night before going to sleep, seeing you makes my sleep comfortable.
+    </div>
+    <div>
+        I don't know why but I need you all the time.
+    </div>
+    <div>
+        I don't know why I never get tired of seeing you.
+    </div>
+    <div>
+        I don't know why I always want to see you.
+    </div>
+    <div>
+        I don't know why I always find my comfort in you.
+    </div>
+    <div>
+        I don't know why I always become happy after seeing you.
+    </div>
+    <div>
+        I don't know why I become sad when you are sad. I become happy when you are happy.
+    </div>
+    <div>
+        because I love you is not the only reason for this.There is something more which I think only God knows.
+    </div>
+    <div>
+        If we do video call for whole day, I can see you all the time.
+    </div>
+    <div>
+        Every time seeing you gives me calmness, happiness and a form of peace...
+    </div>
+    <div>
+        You don't know baby, but after coming to college, my love for you has increase soo much.
+    </div>
+    <div>
+        I can't describe it in words.
+    </div>
+    <div>
+        I love you...<br>I love you from my all.
+    </div>
+    <div>
+        You are my most favourite person baby, <br>you are my comfort.
+    </div>
+    <div>
+        I am grateful of having you.
+    </div>
+    <div>
+        I know our boundaries are high, but I still want to be with you because I have hope in God that one day, we will
+        be together.
+    </div>
+    <div>
+        Baby, I know we fight sometimes for small small things but babe please never think of breaking it. 
+    </div>
+    <div>
+        I know, there are misunderstandings which sometimes came up in between us. but we have to tackle them together.
+    </div>
+    <div>
+        because it's not <br>'you v/s me' <br> but it's <br> 'you and me' v/s problem.
+    </div>
+    <div>
+        Problems can never be bigger than our love.
+    </div>
+    <div>
+        I miss you all the time.
+    </div>
+    <div>
+        I cherish every moment we share and look forward to creating many more beautiful memories together.
+    </div>
+    <div>
+        I fall more in love with you every single day, and I am excited for our journey ahead.
+    </div>
+    <div>
+        You are my comfort baby.
+    </div>
+    <div>
+        I can never think of leaving you.
+    </div>
+    <div>
+        I can never think of hurting you.
+    </div>
+    <div>
+        I love you baby.
+    </div>
+    <div>
+        baby, don't ever think that I don't love you and never leave you.
+    </div>
+    <div>
+        I promise to always love you, support you.
+    </div>
+    <div>
+        I can't wait for the day we can celebrate our love in person, but until then, know that you are always in my
+        heart.
+    </div>
+    <div>
+    </div>
+    <div id="timer">
+        <span>Baby, <br>we have been together from:</span><br>
+        <span id="days"></span><br>
+        <span id="hours"></span><br>
+        <span id="minutes"></span><br>
+        <span id="seconds"></span><br>
+    </div>
+    <div>
+        baby, <br>I want to make this time infinite with you.
+    </div>
+    <div>
+        I want you to know that no matter the distance, my heart is always with you, and you are always on my mind.
+    </div>
+    <div>
+        I love you ❤️
+    </div>
+    <div>
+        - your lover Aman...✒️
+    </div>
+
+
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('audio');
+
+        playButton.addEventListener('click', () => {
+            audio.play();
+        });
+
+        // Set the specific start date and time
+        const startDate = new Date('2024-05-11T18:38:59'); // YYYY-MM-DDTHH:MM:SS
+
+        function updateTimer() {
+            const now = new Date();
+            const elapsedTime = now - startDate;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((elapsedTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+            // Display each unit in separate divs
+            document.getElementById('days').textContent = `${days} days`;
+            document.getElementById('hours').textContent = `${hours} hours`;
+            document.getElementById('minutes').textContent = `${minutes} minutes`;
+            document.getElementById('seconds').textContent = `${seconds} seconds`;
+        }
+
+        // Update the timer every second
+        setInterval(updateTimer, 1000);
+
+        // Initialize timer on page load
+        updateTimer();
+
+
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
